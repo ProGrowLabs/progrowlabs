@@ -55,7 +55,7 @@ export default function App() {
 
       {/* NAV */}
       <nav className={`nav ${scrolled ? 'scrolled' : ''}`}>
-        <span className="nav-logo">ProGrowLabs</span>
+        <span className="nav-logo">ProGrow Labs</span>
         <a href="mailto:hello@progrowlabs.com" className="nav-btn">Get Demo →</a>
       </nav>
 
