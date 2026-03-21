@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import './App.css'
-
+import ProGrowLabsLogo from './components/ProGrowLabsLogo'
 function useInView(threshold = 0.15) {
   const ref = useRef(null)
   const [visible, setVisible] = useState(false)
@@ -55,7 +55,7 @@ export default function App() {
 
       {/* NAV */}
       <nav className={`nav ${scrolled ? 'scrolled' : ''}`}>
-        <span className="nav-logo">ProGrow Labs</span>
+        <span className="nav-logo"><ProGrowLabsLogo size={40} /> ProGrow Labs</span>
         <a href="mailto:hello@progrowlabs.com" className="nav-btn">Get Demo →</a>
       </nav>
 

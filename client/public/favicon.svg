@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="32" height="32">
+  <!-- Bars -->
+  <rect x="0"  y="42" width="16" height="22" rx="3.5" fill="#9FE1CB"/>
+  <rect x="22" y="28" width="16" height="36" rx="3.5" fill="#5DCAA5"/>
+  <rect x="44" y="14" width="16" height="50" rx="3.5" fill="#1D9E75"/>
+  <!-- Balls -->
+  <circle cx="8"  cy="38" r="7.5" fill="#0F6E56"/>
+  <circle cx="30" cy="24" r="7.5" fill="#0F6E56"/>
+  <circle cx="52" cy="10" r="7.5" fill="#0F6E56"/>
+</svg>
