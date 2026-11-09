@@ -35,6 +35,27 @@ const services = [
   { icon: '↗', title: 'Lead-Focused Layout', desc: 'Strategic design that guides visitors toward calling you, not clicking away.' },
 ]
 
+const products = [
+  {
+    name: 'ForwardEP',
+    tagline: "Forward isn't a direction. It's a mindset.",
+    url: 'https://forwardep.co',
+    displayUrl: 'forwardep.co',
+    status: 'live',
+    desc: 'An ecommerce brand for apparel, accessories, and drinkware — essentials made for what you do next. Clear cuts, comfort that keeps up, and custom designs on request.',
+    categories: ['Clothing', 'Accessories', 'Drinkware', 'Custom Design'],
+  },
+  {
+    name: 'Cycla',
+    tagline: 'Fitness that fits your cycle.',
+    url: 'https://cycla.fit',
+    displayUrl: 'cycla.fit',
+    status: 'coming-soon',
+    desc: 'A fitness app built around consistency and progress. Training that moves with you — launching soon at cycla.fit.',
+    categories: ['Fitness', 'Training', 'Progress'],
+  },
+]
+
 const stats = [
   { value: '3×', label: 'More leads on average' },
   { value: '48h', label: 'Demo turnaround' },
@@ -74,7 +95,7 @@ export default function App() {
           </p>
           <div className="hero-btns">
             <a href="mailto:hello@progrowlabs.com" className="btn-primary">Get Free Demo</a>
-            <a href="#services" className="btn-secondary">See How It Works</a>
+            <a href="#products" className="btn-secondary">Our Products</a>
           </div>
         </div>
         <div className="scroll-cue">
@@ -92,6 +113,56 @@ export default function App() {
               <div className="stat-label">{s.label}</div>
             </FadeIn>
           ))}
+        </div>
+      </section>
+
+      {/* PRODUCTS */}
+      <section id="products" className="products">
+        <div className="products-glow" />
+        <div className="products-inner">
+          <FadeIn>
+            <p className="section-label products-label">Our Products</p>
+            <h2>Brands &amp; apps we&apos;re building</h2>
+            <p className="products-intro">
+              Beyond client work — products we own, ship, and grow.
+            </p>
+          </FadeIn>
+          <div className="products-showcase">
+            {products.map((p, i) => (
+              <FadeIn key={p.name} delay={i * 0.18} className={i === 0 ? 'product-featured-wrap' : ''}>
+                <a
+                  href={p.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`product-panel ${p.status === 'coming-soon' ? 'coming-soon' : 'featured'}`}
+                >
+                  <div className="product-panel-header">
+                    <div>
+                      <div className="product-panel-meta">
+                        {p.status === 'coming-soon' ? (
+                          <span className="product-badge">Coming Soon</span>
+                        ) : (
+                          <span className="product-badge live">Live Now</span>
+                        )}
+                        <span className="product-url">{p.displayUrl}</span>
+                      </div>
+                      <h3>{p.name}</h3>
+                      <p className="product-tagline">{p.tagline}</p>
+                    </div>
+                  </div>
+                  <p className="product-desc">{p.desc}</p>
+                  <ul className="product-cats">
+                    {p.categories.map((c) => (
+                      <li key={c}>{c}</li>
+                    ))}
+                  </ul>
+                  <span className="product-cta">
+                    {p.status === 'coming-soon' ? 'Get notified →' : 'Shop ForwardEP →'}
+                  </span>
+                </a>
+              </FadeIn>
+            ))}
+          </div>
         </div>
       </section>
 
